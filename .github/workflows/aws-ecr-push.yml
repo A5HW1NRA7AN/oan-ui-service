@@ -41,8 +41,7 @@ jobs:
             --build-arg VITE_BYPASS_AUTH_ROLE=${{ vars.VITE_BYPASS_AUTH_ROLE }} \
             --build-arg VITE_TELEMETRY_HOST=${{ vars.VITE_TELEMETRY_HOST }} \
             --tag $ECR_REGISTRY/$ECR_REPOSITORY:${{ env.SERVICE_NAME }}-${{ github.sha }} \
-            --label service=${{ env.SERVICE_NAME }} \
-            .
+            --label service=${{ env.SERVICE_NAME }} .
 
           docker tag \
             $ECR_REGISTRY/$ECR_REPOSITORY:${{ env.SERVICE_NAME }}-${{ github.sha }} \
