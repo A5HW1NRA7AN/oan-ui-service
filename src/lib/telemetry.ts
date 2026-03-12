@@ -216,6 +216,7 @@ export const logQuestionEvent = (
       id: "p1",
       type: "default",
     },
+    fingerprint_id: window.__FINGERPRINT_CONTEXT__?.visitorId || "UNKNOWN",
     questionsDetails: {
       questionText: questionText,
       sessionId: sessionId,
@@ -258,6 +259,7 @@ export const logResponseEvent = (
       id: "p1",
       type: "default",
     },
+    fingerprint_id: window.__FINGERPRINT_CONTEXT__?.visitorId || "UNKNOWN",
     questionsDetails: {
       questionText: questionText,
       answerText: responseText,
@@ -294,6 +296,7 @@ export const logErrorEvent = (
       id: "p1",
       type: "default",
     },
+    fingerprint_id: window.__FINGERPRINT_CONTEXT__?.visitorId || "UNKNOWN",
     errorDetails: {
       errorText: error,
       sessionId: sessionId,
@@ -327,6 +330,7 @@ export const logFeedbackEvent = (
       id: "p1",
       type: "default",
     },
+    fingerprint_id: window.__FINGERPRINT_CONTEXT__?.visitorId || "UNKNOWN",
     feedbackDetails: {
       feedbackText: feedbackText,
       sessionId: sessionId,
